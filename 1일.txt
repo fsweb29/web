@@ -56,3 +56,17 @@
 9) <br>: 줄바꿈
 10) <pre>: 있는 그대로 표시
 
+stdw.rf.gd
+샘플: https://github.com/fsweb29/web
+이주리: https://github.com/ju7999/web
+정선민: https://github.com/seoming/web
+최수정: https://github.com/ddoodeok/web
+황혜령:https://github.com/hyeryeonghwang/web
+
+서버 주소
+https://fsweb29.github.io/web/site
+
+샘플: https://fsweb29.github.io/web/site
+이주리: https://ju7999.github.io/web/site
+정선민: https://seonming.github.io/web/site
+최수정: https://ddoodeok.github.io/web/site
