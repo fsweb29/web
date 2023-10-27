@@ -59,7 +59,7 @@
 stdw.rf.gd
 샘플: https://github.com/fsweb29/web
 이주리: https://github.com/ju7999/web
-정선민: https://github.com/seoming/web
+정선민: https://github.com/seonming/web
 최수정: https://github.com/ddoodeok/web
 황혜령:https://github.com/hyeryeonghwang/web
 
