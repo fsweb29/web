@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(common.css);
+
+.container {
+    width: 1500px;
+    padding: 56px 0 160px 0;
+    box-sizing: content-box;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.4rem;
+    padding: 80px 0 16px 0;
+    margin-bottom: 48px;
+    font-weight: normal;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.container ul li {
+    /* position: relative; */
+    width: 360px;
+    margin-bottom: 16px;
+}
+.container ul li:first-child {
+    width: 50%;
+}
+.container ul li span {
+    /* position: absolute; */
+    font-family: Verdana, sans-serif;
+    padding: 8px 0px;
+}
+.container ul::after {
+    content: '1위';
+    z-index: 999;
+    position: absolute;
+    top:0;
+    background: #000;
+    color: #fff;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.container ul li:first-child span {
+    position: absolute;
+    right:0;
+    font-size: 3.6rem;
+}
+
+/* 탭 */
+#tabs {
+    position: relative;
+    height: 500px;
+}
+#tabs label {
+    position: relative;
+    right:calc(-100% + 210px);
+    cursor: pointer;
+}
+#tabs label:not(:first-child)::before {
+    content: '|';
+    margin: 0 8px 0 4px;
+}
+#tabs input {
+    display: none;
+}
+
+#tabs input:checked+div {
+    display: block;
+}
+
+#tabs div {
+    display: none;
+    position: absolute;
+    top: 40px;
+    width: 1500px;
+    height: 500px;
+}
