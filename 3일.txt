@@ -1,0 +1,17 @@
+HTML 태그
+29. <a>         링크
+30. <img>       이미지
+31. <video>     비디오
+32. <audio>     오디오
+33. <source>    <video>와 <audio> 태그 안에 소스
+
+<img src="값">
+<video src="값">
+<audio src="값">
+
+<video>
+    <source src="값">
+</video>
+<audio>
+    <source src="값">
+</audio>
