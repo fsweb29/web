@@ -5,9 +5,9 @@
   <HotKey>Ctrl+Tab</HotKey>
   <Draw_Mode>0</Draw_Mode>
   <Effect_Mode>0</Effect_Mode>
-  <Pen_Color>16711680</Pen_Color>
+  <Pen_Color>255</Pen_Color>
   <Pen_Width>5</Pen_Width>
-  <Pen_Type>2</Pen_Type>
+  <Pen_Type>0</Pen_Type>
   <Text_Size>20</Text_Size>
   <Text_Font>System</Text_Font>
   <AutoSaveEnv>-1</AutoSaveEnv>
