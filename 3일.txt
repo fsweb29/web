@@ -5,13 +5,18 @@ HTML 태그
 32. <audio>     오디오
 33. <source>    <video>와 <audio> 태그 안에 소스
 
-<img src="값">
-<video src="값">
-<audio src="값">
+경로 설정
+1. 상대 경로
+   가. 같은 폴더 -> 파일명
+   나. 하위 폴더 -> 폴더/파일명
+   다. 상위 폴더 -> ../파일명
+   라. 루트 경로 -> /
+   마. .은 현재 폴더
+   바. ..은 상위 폴더
+2. 절대 경로
+   타 사이트의 미디어를 연결할 때 -> 미디어 URL
 
-<video>
-    <source src="값">
-</video>
-<audio>
-    <source src="값">
-</audio>
+CSS 속성
+scroll-behavior: scroll;
+width: px값;
+height: px값;
