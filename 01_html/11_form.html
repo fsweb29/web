@@ -1,5 +1,4 @@
 <!-- https://codepen.io/fsweb29/pen/yLGrbdr?editors=1000 -->
-<!-- form, fieldset, legend, input, label, textarea, select, opation, optgroup, datalist -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +11,76 @@
 
 <body>
     <h1>폼</h1>
+    <!-- 검색 영역: https://www.naver.com/ -->
+    <!-- 로그인 창: https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/ -->
+    <!-- 회원가입: https://nid.naver.com/user2/join/agree?lang=ko_KR&domain=www.naver.com -->
+    <!-- 게시판: https://www.mega-mgccoffee.com/bbs/?bbs_category=1 -->
     <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
     <p>form, fieldset, legend, input, label, textarea, select, opation, optgroup, datalist</p>
 
-    <h2>검색</h2>
+    <!-- 
+        <form>: 폼 요소를 그룹핑(필수)
+        <fieldset>: 그룹핑
+            <legend>: 그룹핑 제목
+        <input>: 입력 상자 - 한 줄 텍스트
+        <button>: 버튼
+        <label>: 레이블
+        <textarea>: 여러 줄 텍스트
 
-    <h2>로그인</h2>
+        <select>: 목록
+            <opation>: 목록의 내용
+            <optgroup>: 목록의 내용을 그룹핑
+        <datalist>: 목록
+            <opation>
+            <optgroup>
+    -->
 
-    <h2>회원가입</h2>
+    <h2>로그인 페이지</h2>
+    <form action="login.jsp">
+        <!-- for 속성 값과 id 속성 값이 일치해야 한다. -->
+        <label for="user_id">아이디:</label>
+        <input type="text" id="user_id" name="user_id" placeholder="아이디를 기록해 주세요." required><br>
+        <label for="user_pw">비밀번호:</label>
+        <input type="password" id="user_pw" name="user_pw" required>
+    </form>
+
+    <h2>검색 창</h2>
+    <input type="search">검색<br><br>
+    전화번호:<input type="tel" name="user_tel"><br>
+    이메일:<input type="email" name="user_email"><br>
+    웹주소:<input type="url" name="user_url">
+
+    <hr>
+    <!-- value는 버튼의 이름 -->
+    <input type="submit" value="전송"><br>
+    <input type="reset" value="초기화"><br>
+    <input type="button" value="버튼"><br>
+    <input type="image" src="../assets/img_submit.gif" alt="더보기"><br>
+    <input type="file" name="myfile" ><br>
+
+    <button type="submit">전송</button><br>
+    <button type="reset">초기화</button><br>
+    <button type="button">버튼</button>
+
+    <hr>
+    <h2>회원 가입 페이지</h2>
+    <form action="member.jsp">
+        <textarea name="rule" id="" cols="30" rows="10">
+
+        </textarea>
+        <!-- 선택하고 싶은 만큼 -->
+        <!-- value은 DB에 전송될 값 -->
+        <fieldset>
+            <legend>당신이 원하는 과목을 선택해 주세요.</legend>
+            <label><input type="checkbox" name="fav_lang" value="html" checked>HTML</label>
+            <label><input type="checkbox" name="fav_lang" value="css" checked>CSS</label>
+            <label><input type="checkbox" name="fav_lang" value="js">JavaScript</label>
+            <label><input type="checkbox" name="fav_lang" value="jq">jQuery</label>
+        </fieldset>
+        <!-- 여러 개 중 1개 선택 -->
+        <label><input type="radio" name="radiogroup" value="yes" checked>예</label>
+        <label><input type="radio" name="radiogroup" value="no">아니오</label>
+    </form>
 </body>
 
 </html>

@@ -1,5 +1,4 @@
 <!-- https://codepen.io/fsweb29/pen/eYboRYO?editors=1000 -->
-<!-- input -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,69 @@
 </head>
 <body>
     <h1>폼</h1>
+    <!-- 
+        <input>: 입력 상자 
+        <button>: 버튼
+    -->
+    <!-- required: 필수 입력 속성 -->
+    아이디:<input type="text" name="user_id" placeholder="아이디를 기록해 주세요." required><br>
+    비밀번호:<input type="password" name="user_pw" required><br><br>
+    <input type="hidden" name="hide"><!-- 개발자(퍼블리셔)가 필요시 사용할 목적 -->
+    <input type="search">검색<br><br>
+    전화번호:<input type="tel" name="user_tel"><br>
+    이메일:<input type="email" name="user_email"><br>
+    웹주소:<input type="url" name="user_url">
+
+    <hr>
+    <!-- value는 버튼의 이름 -->
+    <input type="submit" value="전송"><br>
+    <input type="reset" value="초기화"><br>
+    <input type="button" value="버튼"><br>
+    <input type="image" src="../assets/img_submit.gif" alt="더보기"><br>
+    <input type="file" name="myfile" ><br>
+
+    <button type="submit">전송</button><br>
+    <button type="reset">초기화</button><br>
+    <button type="button">버튼</button>
+
+    <hr>
+    <!-- 선택하고 싶은 만큼 -->
+    <!-- value은 DB에 전송될 값 -->
+    <input type="checkbox" name="fav_lang" value="html" checked>HTML
+    <input type="checkbox" name="fav_lang" value="css" checked>CSS
+    <input type="checkbox" name="fav_lang" value="js">JavaScript
+    <input type="checkbox" name="fav_lang" value="jq">jQuery
+    <hr>
+    <!-- 여러 개 중 1개 선택 -->
+    <input type="radio" name="radiogroup" value="yes" checked>예
+    <input type="radio" name="radiogroup" value="no">아니오
+
+    <hr>
+
+    <!-- 스핀 박스: 정수, step=1 -->
+    <!-- 2에서 10까지, 2씩 증감 -->
+    <!-- value는 초기 값 -->
+    <input type="number" name="quantity" min="2" max="10" step="2" value="2">
+    <!-- 슬라이드 막대: 0 ~ 100% -->
+    <!-- 1 ~ 10 -->
+    <input type="range" name="vote" min="1" max="10" value="3">
+
+    <hr>
+    <!-- 색상: 검정 -->
+    <!-- 16진수: #ff0000 -->
+    <input type="color" name="favcolor" value="#ff0000">
+
+    <hr>
+    <!-- 연도-월-일     2023-11-11 -->
+    <input type="date" name="birth">
+    <!-- 연도-월-일 오후 시간:분    2023-11-11 오후 02:22  -->
+    <input type="datetime-local" name="birthday">
+    <!-- 연도-월   2023-11 -->
+    <input type="month" name="birth_month">
+    <!-- 연도, 번째 주      2023, 45번째 주 -->
+    <input type="week" name="birth_week">
+    <!-- 오후 시:분     오후 02:24 -->
+    <input type="time" name="birth_time">
 
 </body>
 </html>

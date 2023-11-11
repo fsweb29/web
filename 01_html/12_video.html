@@ -7,17 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
+    <style>
+        /* 취소: ctrl+z */
+        /* iframe은 기본 테두리가 있다. */
+        /* 들여쓰기: shift+alt+f */
+        img {
+            width: 300px;
+        }
+        iframe {
+            width: 300px; 
+            height: 200px; 
+            /* 테두리 제거 */
+            border: none;
+        }
+    </style>
 </head>
 
 <body>
     <h1>미디어</h1>
-    <p>video, audio, source, iframe</p>
+    <p>img, video, audio, source, iframe</p>
+
+    <h2>이미지</h2>
+    <!-- <img src="경로/파일명" alt="대체텍스트"> -->
+    
+    <!-- 
+        1. 상업적으로 사용시 주의!!! (저작권, 초상권, 사생활권)
+        2. 크롬웹: fatkun, image downloader 확장 프로그램(플러그인) 설치
+        3. jpg 파일: https://unsplash.com/ko
+        4. png 파일: https://www.pngwing.com/ko -> 배경이 투명한 이미지
+    -->
+
+    <img src="./images/krisztian-matyas-5kS-6zE1KYQ-unsplash.jpg" alt="코카콜라" title="코카콜라">
+
     <!-- 
         <video>
-            <source>
+            <source src="경로/파일.mp4" type="video/mp4">
+            <source src="경로/파일.webm" type="video/webm">
+            <source src="경로/파일.ogv" type="video/ogg">
         </video>
+
         <audio>
-            <source>
+            <source src="경로/파일.mp3 type="audio/mpeg">
+            <source src="경로/파일.wav type="audio/wav">
+            <source src="경로/파일.ogv type="audio/ogg">
         </audio>
 
         <iframe></iframe>
@@ -34,7 +66,8 @@
     -->
     <!-- 비디오: mp4, webm, ogv -->
     <!-- 대우건설: https://www.daewooenc.com/ -->
-    <video autoplay muted loop>
+    <!-- HTML Global 속성: title -->
+    <video autoplay muted loop title="Big Buck Bunny">
         <source src="../assets/video/mov_bbb.mp4" type="video/mp4">
         <source src="../assets/video/mov_bbb.webm" type="video/webm">
         <source src="../assets/video/mov_bbb.ogv" type="video/ogg">
@@ -47,6 +80,13 @@
     <!-- https://www.youtube.com/ -->
     <!-- https://www.youtube.com/embed/YE7VzlLtp-4 -->
     <!-- https://developers.google.com/youtube/player_parameters?hl=ko -->
+
+    <!-- 
+        <iframe src="외부파일"></iframe>
+     -->
+
+    <!-- width="985" height="554" -->
+    <iframe src="https://www.youtube.com/embed/YE7VzlLtp-4" title="Big Buck Bunny" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
     <h2>오디오</h2>
     <!-- 오디오: mp3(음악), wav(효과음), ogv -->
