@@ -8,16 +8,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
     <style>
+        /* border: 굵기 종류 색; */
+        /* body {border: 1px solid blue;}
         div {border: 1px solid red;}
-        span {border: 1px solid red;}
+        span {border: 1px solid red;} */
+
+        /* 그룹 선택자(,) */
+        body, div, span {border: 2px solid red;}
+
+        /* 범용(전체, *) 선택자 */
+        * {border: 1px solid blue;}
+
+        /* height: 높이, 세로 크기 */
+        img {height: 100px;}
     </style>
 </head>
 <body>
     <h1>블록과 인라인</h1>
 
     <h2>블록 레벨 요소</h2>
+    <!-- 
+        블록레벨요소
+        1. 줄바꿈(위에서 아래로 세로 배치)
+        2. 너비(가로 크기)는 부모 크기의 100%
+        3. 높이(세로 크기)는 콘텐츠 크기
+        4. h1~h6, p, hr, ul, ol, li, dl, dt, dd, div, 
+           header, footer, section, article, aside, nav, main, ...
+    -->
+    <!-- 
+
+        아이디:<input type="text">
+        비밀번호:<input type="password">
+        이메일:<input type="text">
+        웹주소:<input type="text">
+        전화번호:<input type="text">
+
+        div: 블록레벨요소를 그룹핑
+
+        HTML5에서 새로나온 시멘틱(의미있는) 태그
+        이메일:<input type="email">
+        header: 머리말 그룹핑
+        footer: 꼬리말 그룹핑
+        section: 섹션(일반적 내용)을 그룹핑
+        article: 독립된 내용 그룹핑
+        aside: 추가 내용 그룹핑
+        nav: 내비게이션(링크) 그룹핑
+        main: 메인 내용 그룹핑
+     -->
+
+    <h3>블록레벨요소들</h3>
+    <p>나는 단락(paragraph)입니다. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui veritatis quam perspiciatis odio voluptatem amet. Temporibus culpa ipsam recusandae voluptatum, reiciendis hic excepturi, vero vel minima ex aliquam, accusantium nulla!</p>
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ul>
+    <header>로고, 내비게이션, SNS</header>
+    <nav>내비게이션</nav>
+    <div>가장 많이 사용되는 태그, 모든 요소를 그룹핑</div>
+    <main>본문 내용 그룹핑, 1page에서 1번만 사용</main>
+    <section><h3>섹션을 그룹핑, 하나 이상의 제목이 있어야 한다.</h3></section>
+    <article><h3>독립된 내용 그룹핑, 하나 이상의 제목이 있어야 한다.</h3></article>
+    <aside>사이드 내용 그룹핑</aside>
+    <footer>하단 로고, 하단 메뉴, 주소, 저작권, 패밀리사이트, SNS</footer>
+
     
     <h2>인라인 요소</h2>
+    <!-- 
+        인라인요소
+        1. 줄바꿈x(왼쪽에서 오른쪽 가로 배치)
+        2. 가로/세로 크기는 콘텐츠 크기
+        3. span, img, a, strong, b, em, i, small, sub, sup, ins, del, br, mark, input, label, textarea, ...
+     -->
 
+    <span>span</span>
+    <img src="../assets/coca.png" alt="coca">
+    <a href="#">링크</a>
+    <strong>제일 중요한 내용, 굵게</strong>
+    <em>중요한 내용, 기울임</em>
+    <mark>중요한 내용, 마킹, 형광펜</mark>
+    <small>작은 글자</small>
+    아래<sub>첨자</sub>
+    윗<sup>첨자</sup>
+    <del>취소, 취소선</del>
+    <ins>삽입, 밑줄</ins>
 </body>
 </html>

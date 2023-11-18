@@ -7,7 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* border: 굵기 종류 색; */
+        /* body {border: 1px solid blue;}
+        div {border: 1px solid red;}
+        span {border: 1px solid red;} */
 
+        /* 그룹 선택자(,) */
+        html, body, h1, h2, p, div, span {border: 2px solid red;}
+        /* .-aaaa, h1, #bbb, .bb {color:red;}
+        #_aaaa, #a123a, #bbb, #bb {color:red;} */
+
+        /* 범용(전체, *) 선택자 */
+        * {border: 1px solid blue;}
+
+        /* 
+            선택자의 우선순위
+            id > class > tag > *
+        */
     </style>
 </head>
 <body>
@@ -17,5 +33,8 @@
 
     <h2>범용(Universal: *, 전체) 선택자</h2>
     <p>범용 선택자 *는 모든 요소를 가리키는 선택자이다.</p>
+
+    <div>모든 HTML 요소를 그룹핑</div>
+    <span>인라인 요소를 그룹핑하여 CSS 적용시킨다.</span>
 </body>
 </html>

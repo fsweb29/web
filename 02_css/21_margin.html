@@ -7,16 +7,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            값이 숫자일 경우 단위를 생략 가능한 숫자는? 0, 0px, 0%
 
+            여백
+            margin-top: 10px
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+
+            속기형(축약형)
+            margin: 10px; -> 상하좌우 모두 10
+            margin: 10px 20px; -> 상하10, 좌우20
+            margin: 10px 20px 30px; -> 상10, 좌우20, 하30
+            margin: 10px 20px 30px 40px; -> 상10우20하30좌40
+        */
+
+        /* 블록레벨요소의 경우 위아래 margin은 큰 쪽으로 지정된다. */
+
+        /* 코드 최적화 - 중복 코드 제거 */
+        div {
+            width: 100px;
+            height: auto;
+            background-color: yellow;
+        }
+
+        .div1 {
+            /* 단위: px, % */
+            /* width: auto는 100%이다. */
+            /* %의 기준은 부모 */
+            width: 50%;
+
+            /* 일반형 */
+            margin-top: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            /* 속기형 */
+            margin: 50px;
+            margin: 50px 50px 50px 50px;
+        }
+        .div2 {
+            /* 일반형 */
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            /* 속기형 */
+            margin: 10px 20px 30px;
+        }
+
+        .div3 {
+            /* 일반형 */
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            /* 속기형 */
+            margin: 10px 20px; 
+        }
+
+        span {
+            margin: 50px;
+            border: 1px solid red;
+        }
     </style>
 </head>
 <body>
     <h1>여백</h1>
-    <div class="m1">박스1</div>
-    <div class="m2">박스2</div>
-    <div class="m3">박스3</div>
-    <div class="m4">박스4</div>
-    <div class="m5">박스5</div>
-    <div class="m6">박스6</div>
+    <div class="div1">% div박스</div>
+    <div class="div2">px div박스</div>
+    <div class="div3">px div박스</div>
+    <hr>
+    <span>px span박스</span>
+    <span>px span박스</span>
 </body>
 </html>
