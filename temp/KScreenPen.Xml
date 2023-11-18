@@ -13,7 +13,7 @@
   <AutoSaveEnv>-1</AutoSaveEnv>
   <AutoSaveScreen>0</AutoSaveScreen>
   <Navigation>0</Navigation>
-  <AlwaysTop>-1</AlwaysTop>
+  <AlwaysTop>0</AlwaysTop>
   <ToolBarView>0</ToolBarView>
   <DualMonitor>-1</DualMonitor>
   <ZoomStatusKeep>0</ZoomStatusKeep>
