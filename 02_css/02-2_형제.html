@@ -7,7 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+       /* 
+            형제선택자: 형~제
+            인접형선택자: 형+제
+
+            가상 클래스 선택자 -> :
+            :nth-child(n)
+            :nth-of-type(n)
+
+            :first-child
+            :last-child
+            :first-of-type
+            :last-of-type
+            ...
+        
+       */
+       p {color: red;}
+       .p1 {color: blue;}
        
+       .tit ~ p {background-color: green;}
+       h1 + h2 {background-color: yellow;}
     </style>
 </head>
 <body>
@@ -17,7 +36,7 @@
     <p class="p1">기호는 ~이다.</p>
     <p>형 ~ 제에서 여러 개의 제 요소 선택한다.</p>
     
-    <h2>인접 형제 선택자: +</h2>
+    <h2 class="tit">인접 형제 선택자: +</h2>
     <p>기호는 +이다.</p>
     <p>형 + 제에서 바로 아래 하나의 제 요소만 선택한다.</p>
 </body>

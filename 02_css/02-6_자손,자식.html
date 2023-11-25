@@ -8,14 +8,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML+CSS</title>
         <style>
+            /* 선택자 {속성: 값;} */
+            /* 
+                id
+                class
+                태그
+                전체
+                그룹
 
+                하위(자식, 손자): 부모 하위
+                자식: 부모>자식
+                형제: 형~제
+                인접형제: 형+제
+            */
+
+            .main1 .sub {
+                border: 1px solid red;
+            }
+            .main2>li {
+                border: 1px solid blue;
+            }
         </style>
     </head>
 
     <body>
         <h1>선택자</h1>
         <h2>후손 선택자: 공백</h2>
-        <ul class="main">
+        <ul class="main1">
             <li>메뉴1
                 <ul class="sub">
                     <li>서브1</li>
@@ -27,7 +46,7 @@
         </ul>
 
         <h2>자식 선택자: &gt;</h2>
-        <ul class="main">
+        <ul class="main2">
             <li>메뉴1
                 <ul class="sub">
                     <li>서브1</li>

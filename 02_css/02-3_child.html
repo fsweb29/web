@@ -7,24 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            pseudo(슈도, 가상, 의사, 가짜) 클래스 -> :
 
+            선택자:nth-child(n) -> n번 요소
+            선택자:nth-of-type(n) -> n번 요소
+            n은 숫자, 2n(짝수), 2n-1(홀수), odd(홀수), even(짝수), 3n(3의배수), 4n(4의배수), 4n-1...
+
+            선택자:first-child -> 첫 번째 요소
+            선택자:last-child -> 마지막 번째 요소
+            선택자:first-of-type -> 첫 번째 요소
+            선택자:last-of-type -> 마지막 번째 요소
+        */
+
+        /* 타입을 구분하지 않는다 */
+        div p:last-child {font-size: 20px;}
+        div p:nth-child(3) {color: red;}
+        div p:nth-child(odd) {background-color: yellow;}
+        /* 타입을 구분한다 */
+        div p:first-of-type {font-size: 30px;}
+        div p:nth-of-type(3) {color: blue;}
+        div p:nth-of-type(even) {background-color: lime;}
+        div p:nth-of-type(3n) {text-decoration: underline;}
     </style>
 </head>
 <body>
     <h1>의사 클래스 선택자</h1>
-    <h2>~child</h2>
-    <p>1 번째 요소입니다.</p>
-    <p>2 번째 요소입니다.</p>
-    <p>3 번째 요소입니다.</p>
-    <p>4 번째 요소입니다.</p>
-    <p>5 번째 요소입니다.</p>
-    <p>6 번째 요소입니다.</p>
-    <p>7 번째 요소입니다.</p>
-    <p>8 번째 요소입니다.</p>
-    <p>9 번째 요소입니다.</p>
-    <p>10 번째 요소입니다.</p>
-    <p>11 번째 요소입니다.</p>
-    <p>12 번째 요소입니다.</p>
-    <p>13 번째 요소입니다.</p>
+    <div>
+        <h2>child1</h2>
+        <p>child2, of-type1</p>
+        <p>child3, of-type2</p>
+        <p>child4, of-type3</p>
+        <p>child5, of-type4</p>
+        <h2>child6</h2>
+        <p>child7, of-type5</p>
+        <p>child8, of-type6</p>
+        <p>child9, of-type7</p>
+    </div>
 </body>
 </html>

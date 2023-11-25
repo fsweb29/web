@@ -8,15 +8,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            글자(text, font) 관련 속성
+            font-family: 글꼴;
+            font-size: 크기;
+            font-weight: 굵기;
+            font-style: 기울임;
+            line-height: 줄간격;
 
-        
+            (속기)
+            font: 굵기 또는 기울임 크기/줄간격 글꼴;
+            
+            color
+        */
+
+        /* 
+            글자의 가독성이 높아야한다.
+
+            글꼴 이름이 두 단어 이상일 경우 ''로 묶는다.
+            serif: 바탕, 'Times New Roman'
+            sans-serif: 굴림, 돋음, 'Segoe UI', Verdana,
+
+            font-family: 값1, 값2, 값, ...;
+        */
+
+        .f1 {
+            font-family:'Times New Roman', Times, serif;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.5; /* 글자 크기의 1.5배 */
+        }
+        .f2 {
+            /* font: [굵기|기울임] 크기/줄간격 글꼴; */
+            font: bold italic 20px/1.5 'Times New Roman', Times, serif;
+        }
+        .f3 {
+            /* font: 크기 글꼴; */
+            /* font 속기 속성은 반드시 크기와 글꼴을 사용해야 하며, 순서를 지켜서 쓴다. */
+            font: 20px 'Times New Roman', Times, serif;
+        }
     </style>
 </head>
 
 <body>
-    <h1>글꼴 속기 속성</h1>
+    <h1>글자 속성</h1>
+    <p>font-family, font-size, font-style, font-weight 속성 등이 있다.</p>
     <p class="f1">font-family, font-size, font-style, font-weight 속성 등이 있다.</p>
     <p class="f2">font-family, font-size, font-style, font-weight 속성 등이 있다.</p>
+    <p class="f3">font-family, font-size 속성 등이 있다.</p>
 </body>
 
 </html>
