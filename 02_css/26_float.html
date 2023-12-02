@@ -7,13 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            블록레벨 요소를 가로 배치해 준다.
+            float: left; -> 왼쪽 기준 배치
+            float: right; -> 오른쪽 기준 배치
 
+            clear는 float 처리한 요소의 아래(형제) 요소에 대해서 float이 적용되지 않도록 제거
+
+            clear: both;
+        */
+
+        .d1 {float: left;}
+        .d2 {float: left;}
+        .d3 {clear: both;}
+
+        .d4 {display: inline-block;}
     </style>
 </head>
 <body>
-    <h1>플로트</h1>
-    <div class="div1">박스1</div>
-    <div class="div2">박스2</div>
-    <div class="div3">박스3</div>
+    <h1>배치</h1>
+    <h2>플로트</h2>
+    <div class="d1">박스1</div>
+    <div class="d2">박스2</div>
+    <div class="d3">박스3</div>
+    <h2>인라인 또는 인라인블록</h2>
+    <div class="d4">박스1</div>
+    <div class="d4">박스2</div>
+    <div class="d4">박스3</div>
 </body>
 </html>

@@ -8,14 +8,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            flex-grow: 성장;
+                값: 0, 숫자
+            flex-shrink: 수축;
+                값: 1, 숫자
+            flex-basis: 초기값;
+                값: auto, px, %
 
+            (속기형)
+            flex: [성장] [수축] [초기값];
+            flex: 숫자 숫자 숫자(단위);
+
+            0이면 성장/수축하지 않음.
+            0이 아니면 성장/수축함.
+
+            생략하면 flex: 0 1 auto;
+            flex: auto; -> flex: 1 1 auto;
+            flex: 1; -> flex: 1 1 auto;
+        */
+
+        .container {
+            background-color: yellow;
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+        .container div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 5px;
+        }
+
+        div div {
+            /* 
+                기본값 
+                flex-grow:0; flex-shrink:1; -> 수축o, 성장x  
+            */
+            /* flex-wrap: nowrap; 일경우 적용된다. */
+            flex-shrink: 1;
+            flex-grow: 0;
+            /* 초기 가로 크기 */
+            flex-basis: auto;
+
+            /* 속기형 */
+            /* flex: 성장 수축 초기값 */
+            flex: 0 1 auto;
+        }
+
+        .fx1 div:nth-of-type(1) {flex-shrink: 1;}
+        .fx1 div:nth-of-type(2) {flex-shrink: 2;}
+        .fx1 div:nth-of-type(3) {flex-shrink: 3;}
+
+        .fx2 div:nth-of-type(1) {flex-grow: 1;}
+        .fx2 div:nth-of-type(2) {flex-grow: 2;}
+        .fx2 div:nth-of-type(3) {flex-grow: 3;}
     </style>
 </head>
 
 <body>
     <h1>flexible(플렉서블)</h1>
     <h2>플렉스 아이템의 성장/수축/초기값</h2>
-    <div class="container fl1">
+    <div class="container fx1">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -28,10 +82,10 @@
 
     <hr>
     
-    <div class="container fl2">
-        <div class="fx1">1</div>
-        <div class="fx2">2</div>
-        <div class="fx3">3</div>
+    <div class="container fx2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
     </div>
 
 </body>
