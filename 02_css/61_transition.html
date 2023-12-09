@@ -18,7 +18,7 @@
                 값: 숫자s (단위: s(초))
             transition-timing-function(trst): 값1, 값2, ...; -> 시간 함수
                 값: 
-                    가속: ease, ease-in, ease-out, ease-in-out
+                    가속: ease(기본값), ease-in, ease-out, ease-in-out
                     등속: linear
                     사용자 정의: cubic-bezier(n,n,n,n) -> n은 0~1의 숫자
             transition-delay(trsde): 값1, 값2, ...; -> 지연 시간
@@ -30,24 +30,26 @@
         */
 
         div {
-            width:100px;
-            height:50px;
-            background: red;
-
-            /* transition-property: width, height;
-            transition-duration: 1s, .5s;
-            transition-timing-function: ease, ease-in;
-            transition-delay: 0s, 1s; */
-
-            transition: width 1s, height .5s ease-in 1s;
-            
-        }
-        
-        /* div에 마우스를 올리면 */
-        div:hover {
             width: 200px;
             height: 100px;
-            background: blue;
+            background-color: red;
+
+            /* all은 div에 지정한 모든 속성 */
+            transition-property: all;
+            /* 1s는 1초 */
+            transition-duration: 1s;
+            /* 시간함수: 가속도(easing) */
+            transition-timing-function: ease;
+            /* 3초 뒤에 전환 */
+            transition-delay: 0s;
+
+            /* transition: all 0.5s ease 0s; */
+            /* 시간을 2개쓰면 .5초가 전환시간 1초가 지연시간 */
+            transition: width .5s, background-color .5s 1s;
+        }
+        div:hover {
+            width: 300px;
+            background: green;
         }
     </style>
 </head>

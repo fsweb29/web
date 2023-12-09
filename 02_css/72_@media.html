@@ -5,11 +5,40 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 1. 뷰포트 설정 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>미디어쿼리</title>
     <style>
+        /*
+            @media [not|only] [mediatype] [and|,] (expressions) {
+                CSS-code;
+            }
 
+            mediatype: all, screen(모니터, 폰), tv, projection, print, ...
+            and: 그리고
+            , : 또는
+            expressions: 조건으로 min-width, max-width, orientation, ...
 
+            width: 가로 크기;
+            min-width: 최소 가로 크기;
+            max-width: 최대 가로 크기;
+        */
+
+        /* 중단점(Break Point): 미디어 쿼리의 영역을 나누는 기준 */
+
+        /* 공통 */
+        body {background: yellow;}
+
+        /* 최소 600 -> 600이상 */
+        @media (min-width: 600px) {
+            /* 테블릿 CSS */
+            body {background: red;}
+        }
+        /* 최소 992 -> 992이상 */
+        @media (min-width: 992px) {
+            /* 데스크탑 CSS */
+            body {background: green;}
+        }
     </style>
 </head>
 

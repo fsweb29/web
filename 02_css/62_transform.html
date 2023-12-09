@@ -8,8 +8,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            속성: 함수값;
 
+            transform(변환)
+                1. 2D: x, y -> 이동, 크기 조절, 회전, 기울임
+                2. 3D: x, y, z -> 이동, 크기 조절, 회전
 
+                1. 이동: translate(값, 값)
+                2. 크기 조절: scale(값, 값)
+                3. 회전: rotate(값)
+                4. 기울임: skew(값, 값)
+
+            transform(변환): 값;
+                단위: px, %
+                translateX(x): 좌우
+                translateY(y): 상하
+                translateZ(z): 깊이(앞뒤)
+                perspective(값): 원근감 -> 변형 요소에 직접 지정
+                translate(x[,y]) -> y를 생략하면 x만
+
+                단위 없음. 기본값(1)
+                scaleX(x): 가로
+                scaleY(y): 세로
+                scale(x[,y]) -> y를 생략하면 x에 비례하여 y값이 적용된다.
+
+                단위: deg(각도)
+                rotate(각도) -> 2D
+                rotateX(각도) -> 3D
+                rotateY(각도) -> 3D
+
+                단위: deg(각도)
+                skewX(각도)
+                skewY(각도)
+                skew(각도, 각도)
+
+            2D 변환: x축, y축
+
+            3D 변환: x축, y축, z축
+            perspective: 1000px; -> 관점, 부모 요소에 지정
+                값: px (%는 사용할 수 없다.)
+            perspective-origin: x축 y축; -> 관점 기준
+            transform-origin: x축 y축; -> 변형 기준
+                값: px, %, 키워드
+                x축: left, right, center
+                y축: top, bottom, center
+            
+            transform-style
+            backface-visibility
+        */
+
+        div {
+            width: 200px; height: 100px;
+            border: 1px dotted red;
+            margin: 20px;
+            /* div 영역을 벗어나면 숨김 */
+            /* overflow:hidden; */
+            perspective: 800px;
+        }
+        span {
+            display: inline-block;
+            width: 100px; height: 100px;
+            background: red;
+            transition: .3s;
+        }
+        /* https://www.honorsville.co.kr/ */
+        .trftr {
+            width: 200px;
+            transform: translate(-200px, 0);
+        }
+        div:hover .trftr {
+            transform: translate(0px, 0);
+        }
+        .trfsc:hover {
+            /* 기본값은 가로와 세로 모두 1 */
+            transform: scale(1.2, 1.2);
+        }
+        .trfro:hover {
+            transform: rotate(90deg);
+        }
+        /* 3D는 perspective와 함께 사용! */
+        /* perspective 속성은 부모 요소에 지정! */
+        div:hover .trfrox {
+            transform: rotateX(80deg);
+        }
+        div:hover .trfroy {
+            transform: rotateY(80deg);
+        }
+        .trfsk {
+            transform: skew(10deg, 10deg);
+        }
     </style>
 </head>
 

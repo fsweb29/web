@@ -9,8 +9,16 @@ html {
 body,h1,h2,h3,p,ul {
     margin:0;
 }
+body {
+    font-size: 1.5rem;
+}
 ul {
     padding:0;
+}
+a {
+    text-decoration: none;
+    /* 링크 글자색은 a태그에 직접 지정 */
+    color: #333;
 }
 
 iframe {
