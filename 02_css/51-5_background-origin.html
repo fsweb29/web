@@ -1,6 +1,7 @@
 <!-- https://codepen.io/fsweb29/pen/qBLzJzz?editors=1000 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,17 @@
     <title>HTML+CSS</title>
     <style>
         /* 
-            background-origin: 이미지 시작 위치;
-                값: padding-box, border-box, content-box
+            background-origin: 배경이미지 시작 위치;
+                값: 
+                    padding-box(기본값): 패딩 영역부터 배경이미지가 지정된다
+                    border-box: 테두리 영역부터 배경이미지가 지정된다
+                    content-box: 콘텐츠 영역부터 배경이미지가 지정된다
+
             background-clip: 배경색 시작 위치;
-                값: border-box, padding-box, content-box
+                값:
+                    border-box(기본값): 테두리 영역부터 배경색가 지정된다
+                    padding-box: 패딩 영역부터 배경색가 지정된다
+                    content-box: 콘텐츠 영역부터 배경색가 지정된다
         */
         div {
             width: 500px;
@@ -20,13 +28,26 @@
             margin: 20px;
             padding: 20px;
 
-            background-image:url(../assets/images/italy1.jpg);
+            background-color: yellow;
+            background-image: url(../site/images/house3.jpg);
             background-repeat: no-repeat;
             background-size: 50%;
         }
-        .bop {background-origin: padding-box;}
-        .bob {background-origin: border-box;}
-        .boc {background-origin: content-box;}
+
+        .bop {
+            background-origin: padding-box;
+            background-clip: border-box;
+        }
+
+        .bob {
+            background-origin: border-box;
+            background-clip: padding-box;
+        }
+
+        .boc {
+            background-origin: content-box;
+            background-clip: content-box;
+        }
     </style>
 </head>
 
@@ -36,4 +57,5 @@
     <div class="bop">padding-box</div>
     <div class="bob">border-box</div>
     <div class="boc">content-box</div>
+
 </html>

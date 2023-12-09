@@ -8,17 +8,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            position: static; (기본값)
+            position: relative;
+            position: absolute;
+            position: fixed; -> 고정
+            position: sticky; (IEx)
 
+            left, right, top, bottom의 기준은
+                relative의 경우 자기자신(static 상태 일때의 위치)
+                absolute의 경우 position:static;이 아닌 가장 가까운 조상(부모)이며, 없으면 창
+                fixed의 경우 창
 
+            position: relative; (자기자신)
+            position: absolute; 
+                position이 static이 아닌 조상
+                position이 static이 아닌 조상 없으면 창
+            position: fixed; (창) -> 스크롤시 고정
+            position: sticky; (창) -> 스크롤시 고정
+
+            relative, absolute, fixed, sticky를 지정하면 
+            left, right, top, bottom, z-index 속성을 사용할 수 있다.
+            
+            left: 숫자px;
+            top: 숫자px;
+            right: 숫자px;
+            bottom: 숫자px;
+            z-index: 숫자; -> 깊이(depth)
+        */
+
+        div {
+            width: 200px;
+            height: 200px;
+            background: yellow;
+
+            /* left: 150px; */
+            /* top: 150px; */
+            right: 50px;
+            bottom: 50px;
+        }
+
+        .pos2 {
+            background: red;
+            position: relative;
+        }
+
+        .pos3 {
+            background: blue;
+            position: absolute;
+            /* 숫자가 클수록 위로 올라감 */
+            /* 지정하지 않으면 html 코드상 아래쪽에 기록한 것이 위로 올라감 */
+            z-index: 3;
+        }
+
+        .pos4 {
+            background: green;
+            position: fixed;
+            /* z-index: 2; */
+        }
+        .grand-parent {
+            position: relative;
+            left: 20px;
+            top: 50px;
+            width: 500px;
+            height: 500px;
+            background: black;
+        }
+        .parent {
+            position: relative;
+            left: 70px;
+            top: 50px;
+            width: 500px;
+            height: 500px;
+            background: gray;
+        }
     </style>
 </head>
 
 <body>
     <h1>위치</h1>
-    <div class="pos1">static</div>
-    <div class="pos2">relative</div>
-    <div class="pos3">absolute</div>
-    <div class="pos4">fixed</div>
+    <div class="grand-parent">
+        <div class="parent">
+            <div class="pos2">relative</div>
+            <div class="pos3">absolute</div>
+            <div class="pos4">fixed</div>
+            <div class="pos1">static</div>
+        </div>
+    </div>
 </body>
 
 </html>

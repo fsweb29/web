@@ -1,17 +1,62 @@
 <!-- https://codepen.io/fsweb29/pen/XWoLxYB?editors=1000 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            background-color: 배경색
+                background-clip: 시작 위치;
+            background-image: url(경로/이미지), url(경로/이미지), ...; 
+                background-repeat: 반복;
+                    값: repeat, no-repeat, repeat-x, repeat-y
+                background-position: x위치 y위치;
+                    값: px, %, 키워드
+                    x위치: left, right, center
+                    y위치: top, bottom, center
+                background-attachment -> 패럴렉스 이미지
+                background-size: w크기 h크기;
+                    값: px, %(기준은 박스크기), 키워드
+                    키워드: contain, cover
+                background-origin: 시작 위치;
+            background-blend-mode: 합성 방식;
 
+            (속기형)
+            background: color image repeat position/size origin clip,  color image repeat position/size origin clip ...;
+        */
+
+        div {
+            border: 1px solid blue;
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        img {
+            height: 200px;
+        }
+        
+        .bg {
+            /* background-color: black;
+            background-image: url(../assets/coca.png), url(../assets/bg-line.svg), url(../assets/bg.png);
+            background-repeat: no-repeat, repeat, repeat-x;
+            background-position: 80px 50px, 0 0, 0 0;
+            background-size: 100px, cover, 5%; */
+
+            /* 앞에 기술한 내용이 위에 표시된다. */
+            background: url(../assets/coca.png) no-repeat 80px 50px/100px, url(../assets/bg-line.svg) repeat 0 0/cover, url(../assets/bg.png) repeat-x 0 0/5%, black;
+        }
     </style>
 </head>
 
 <body>
     <h1>멀티 배경 이미지</h1>
-    <div></div>
+    <div class="bg">배경 이미지와 배경색</div>
+    <div>실제이미지<img src="../assets/coca.png" alt="콜라"></div>
+
 </html>

@@ -7,16 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            배경 이미지의 고정 여부
+            background-attachment: 값;
+                값: scroll, fixed
+                scroll: 배경 이미지가 스크롤 된다.
+                fixed: 배경 이미지가 고정된다.
+            
+            패럴렉스 스크롤링 기법
+            https://www.starbucks.co.kr/index.do
+        */
 
-
+        .bg {
+            font-size: 3rem;
+            color: white;
+            text-align: center;
+            line-height: 500px;
+            height: 500px;
+            background-image: url(../assets/231116_1_pc_pick_bg.jpg);
+            background-attachment: fixed;
+        }
     </style>
 </head>
 
 <body>
     <h1>배경 이미지 고정 여부</h1>
     <h2>패럴랙스 스크롤</h2>
-    <div class="div1">배경 이미지 고정</div>
-    <div class="div2">
+    <div class="bg">배경 이미지 고정</div>
+    <div>
         <h3>콘텐츠의 제목</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat aut ea impedit nesciunt magni, ducimus fuga quasi labore ex assumenda rem, adipisci earum dolor eligendi, velit pariatur aspernatur animi quis!</p>
     </div>

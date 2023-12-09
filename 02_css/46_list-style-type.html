@@ -8,69 +8,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            목록의 마커
+            list-style-type: 유형;
+                <ul>,<ol>값: none(없음)
+                <ul>값: disc(기본값), circle, square
+                <ol>값: decimal(기본값), decimal-leading-zero, 
+                        upper-alpha, lower-alpha, 
+                        upper-roman, lower-roman, ...
 
+            https://www.w3schools.com/cssref/pr_list-style-type.php
+                        
+            list-style-image: url('경로/이미지파일');
+            list-style-position: 위치;
+                값: outside(기본값), inside
 
+            (속기형)
+            list-style: type|image [position];
+        */
+
+        ul {
+            border: 1px solid red;
+            /* image와 type을 같이 적용하면 image가 적용된다. */
+            /* list-style-image: url(../assets/star.svg); */
+            list-style-type: square;
+            list-style-position: inside;
+            color: red;
+
+            list-style: square url(../assets/star.svg) inside;
+        }
+        ul li {
+            border: 1px dashed blue;
+        }
+        ul li:nth-of-type(1) {
+            list-style-type: circle;
+            color: blue;
+        }
+        ol {
+            list-style-type: lower-alpha;
+        }
+        ol li:nth-of-type(1) {
+            list-style-image: url(../assets/star.svg);
+        }
     </style>
 </head>
 
 <body>
     <h1>CSS 목록 관련 속성</h1>
     <h2>순서 없는 목록</h2>
-    <!-- type="disc|circle|square" -->
-    <ul class="lst1">
-        <li>아메리카노</li>
-        <li>카페모카</li>
-        <li>카페라떼</li>
-    </ul>
-    <ul class="lst2">
-        <li>아메리카노</li>
-        <li>카페모카</li>
-        <li>카페라떼</li>
-    </ul>
-    <ul class="lst3">
-        <li>아메리카노</li>
-        <li>카페모카</li>
-        <li>카페라떼</li>
-    </ul>
-    <ul class="lst10">
+    <ul>
         <li>아메리카노</li>
         <li>카페모카</li>
         <li>카페라떼</li>
     </ul>
 
     <h2>순서 있는 목록</h2>
-    <!-- type="1|A|a|I|i" -->
-    <ol class="lst4">
-        <li>아메리카노</li>
-        <li>카페모카</li>
-        <li>카페라떼</li>
-    </ol>
-    <ol class="lst5">
-        <li>아메리카노</li>
-        <li>카페모카</li>
-        <li>카페라떼</li>
-    </ol>
-    <ol class="lst6">
-        <li>아메리카노</li>
-        <li>카페모카</li>
-        <li>카페라떼</li>
-    </ol>
-    <ol class="lst7">
-        <li>아메리카노</li>
-        <li>카페모카</li>
-        <li>카페라떼</li>
-    </ol>
-    <ol class="lst8">
-        <li>아메리카노</li>
-        <li>카페모카</li>
-        <li>카페라떼</li>
-    </ol>
-    <ol class="lst9" start="4">
-        <li>딸기우유</li>
-        <li>초코우유</li>
-        <li>커피우유</li>
-    </ol>
-    <ol class="lst11">
+    <ol>
         <li>아메리카노</li>
         <li>카페모카</li>
         <li>카페라떼</li>
